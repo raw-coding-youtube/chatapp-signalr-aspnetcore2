@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  width: 100wh;
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar {
+  background-color: #342742;
+  min-height: 50px;
+  z-index: 100;
+  box-shadow: 0 1px 2px 0 #333;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar > a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  padding-top: 0.8rem;
+  padding-left: 1rem;
+}
+
+.main {
+  flex-grow: 1;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.side-menu {
+  background-color: #443554;
+  min-width: 100px;
+  max-width: 100px;
+  z-index: 50;
+  box-shadow: 1px 0 2px 0 #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.room-button {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.75rem 1rem 0;
+  height: 68px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px 1px #333;
+  background-color: #57446b;
+  text-align: center;
+}
+
+.room-button > strong {
+  font-size: 36px;
+}
+
+.room-button:hover {
+  box-shadow: 0 2px 3px 1px #222;
+}
+
+.chat {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+}
+
+.chat-body {
+  background-color: #eee;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1rem;
+  overflow: auto;
+}
+
+.message {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0.2rem;
+}
+
+.message:first-child {
+  margin-top: auto;
+}
+
+.message > * {
+  padding: 0.2rem;
+}
+
+.message > header {
+  font-weight: bold;
+  min-width: 100px;
+  text-align: right;
+}
+.message > p {
+  margin: 0;
+  flex-grow: 5;
+}
+.message > footer {
+  min-width: 60px;
+  text-align: center;
+}
+
+.chat-input {
+  background-color: #443554;
+  min-height: 70px;
+  max-height: 70px;
+  z-index: 25;
+  box-shadow: 0 -1px 2px 0 #333;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+.chat-input > input {
+  flex-grow: 2;
+}
+
+.chat-input > button {
+  flex-grow: 1;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  min-height: 100vh;
+  min-width: 100vw;
+  z-index: 200;
+  top: 0;
+  left: 0;
+  background-color: rgba(0.2, 0.2, 0.2, 0.8);
+}
+
+.modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-body > .close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  margin-top: 0;
+}
+
+.modal-body {
+  position: relative;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  background-color: #5c4773;
+  padding: 1rem;
+}
+
+.modal-body > * {
+  margin-top: 0.75rem;
+}
+
+.modal-body > header {
+  color: #fff;
+  font-size: 24px;
+}
+
+.modal-body > div > input {
+  width: 100%;
+}
+
+.modal-body > footer {
+  text-align: center;
+}
